@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "kubernetes",
+    "gatewayType": "SpringCloudGateway",
+    "monitoring": "no",
+    "directoryPath": "../",
+    "appsFolders": ["gateway", "products"],
+    "clusteredDbApps": [],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "fridgy",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "fridgy",
+    "kubernetesServiceType": "LoadBalancer",
+    "ingressDomain": "",
+    "istio": false,
+    "jwtSecretKey": "MjVmOGYxYTBiYWE5Y2JjYTNiMzlkYzk4N2ZjNzEzZGU1OTI1YzRhYjJiYzI1NjgwNDkzNmE5NzM5NWEzYmI3YmE3YjQyZjNlNWIxYWFhNGI2M2RiYzI1MWMzYTE5YjE3N2ZhMQ=="
+  }
+}
