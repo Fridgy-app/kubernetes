@@ -7,7 +7,7 @@ metadata:
     app: gateway-postgresql
 type: Opaque
 data:
-  postgresql-password: NDlkNDY3ODhjNWI2NzNhYmYxZjQwMDcxODFiZDgyYjI5OGYxOTA5NWY1MDczMmQ5NGE5NWVjYzk1NTc4
+  postgresql-password: ZWRlZDcyYzQ5OTFlMjRhY2QyNWFjZDM0YmRmMDYzZDg3YmE1MTc1NDQ5N2QyZjJiZjQ4Zjk3Y2IxNzBh
 ---
 apiVersion: apps/v1
 kind: Deployment
