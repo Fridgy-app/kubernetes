@@ -5,6 +5,10 @@ namespace: fridgy
 
 resources:
   - namespace.yml
+  # Keycloak
+  - keycloak-k8s/keycloak-config.yml
+  - keycloak-k8s/keycloak-deployment.yml
+  - keycloak-k8s/keycloak-service.yml
   # Individual apps
   - gateway-k8s/gateway-deployment.yml
   - gateway-k8s/gateway-service.yml

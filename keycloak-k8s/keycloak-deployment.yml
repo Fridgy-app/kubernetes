@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: keycloak
+  name: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: keycloak
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        name: keycloak
+    spec:
+      containers:
+        - args:
+            - -b
+            - 0.0.0.0
+            - -Dkeycloak.migration.action=import
+            - -Dkeycloak.migration.provider=dir
+            - -Dkeycloak.migration.dir=/opt/jboss/keycloak/realm-config
+            - -Dkeycloak.migration.strategy=OVERWRITE_EXISTING
+            - -Djboss.socket.binding.port-offset=1000
+            - -Dkeycloak.profile.feature.upload_scripts=enabled
+          env:
+            - name: KEYCLOAK_PASSWORD
+              value: admin
+            - name: KEYCLOAK_USER
+              value: admin
+            - name: DB_VENDOR
+              value: h2
+          image: 'jboss/keycloak:12.0.4'
+          name: keycloak
+          ports:
+            - containerPort: 9080
+            - containerPort: 9443
+            - containerPort: 10990
+          volumeMounts:
+            - mountPath: "/opt/jboss/keycloak/realm-config/"
+              name: realm-config
+              readOnly: true
+      restartPolicy: Always
+      volumes:
+        - name: realm-config
+          configMap:
+            name: keycloak-config
