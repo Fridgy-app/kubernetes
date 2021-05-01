@@ -27,13 +27,6 @@ spec:
               value: "1"
           ports:
             - containerPort: 9092
-          resources:
-            requests:
-              memory: "512Mi"
-              cpu: "500m"
-            limits:
-              memory: "1Gi"
-              cpu: "1"
 ---
 apiVersion: v1
 kind: Service
@@ -73,13 +66,6 @@ spec:
               value: "2"
           ports:
             - containerPort: 2181
-          resources:
-            requests:
-              memory: "512Mi"
-              cpu: "500m"
-            limits:
-              memory: "1Gi"
-              cpu: "1"
 ---
 apiVersion: v1
 kind: Service

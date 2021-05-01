@@ -2425,3 +2425,4 @@ kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: keycloak-config
+  namespace: fridgy

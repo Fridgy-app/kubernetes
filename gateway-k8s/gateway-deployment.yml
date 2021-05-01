@@ -99,14 +99,7 @@ spec:
             - name: SPRING_DATA_ELASTICSEARCH_CLIENT_REACTIVE_ENDPOINTS
               value: gateway-elasticsearch.fridgy.svc.cluster.local:9200
             - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI
-              value: "http://keycloak.fridgy.svc.cluster.local:9080/auth/realms/jhipster"
-          resources:
-            requests:
-              memory: "512Mi"
-              cpu: "500m"
-            limits:
-              memory: "1Gi"
-              cpu: "1"
+              value: "https://fridgy.rasztabiga.me/auth/realms/jhipster"
           ports:
             - name: http
               containerPort: 8080
