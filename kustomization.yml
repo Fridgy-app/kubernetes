@@ -14,6 +14,7 @@ resources:
   - gateway-k8s/gateway-service.yml
   - gateway-k8s/gateway-postgresql.yml
   - gateway-k8s/gateway-elasticsearch.yml
+  - gateway-k8s/gateway-ingress.yml
   - products-k8s/products-deployment.yml
   - products-k8s/products-service.yml
   - products-k8s/products-postgresql.yml

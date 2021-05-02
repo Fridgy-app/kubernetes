@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: gateway
+  namespace: fridgy
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+    - host: "fridgy.rasztabiga.me"
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: gateway
+              servicePort: 8080
